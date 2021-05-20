@@ -3,10 +3,10 @@
     <h1 class="title">{[posttitle]}</h1>
     <small>{[postdate]}</small>
     <div class="articlebody markdown-body">{[postcontent]}</div>
-    <div class="tags">
+    {(:PostEnd)}
+	<div class="tags">
         <span>标签:</span>{[posttags]}
     </div>
-    {(:PostEnd)}
     <div class="comments">{[comments]}</div>
     {(Footer:)}
 </article>
