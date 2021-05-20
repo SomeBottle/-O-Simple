@@ -1,0 +1,19 @@
+{(Tags)}
+<article>
+    <h1 class="title">标签们</h1>
+    <div class="tagshow">{[tags]}</div>
+</article>
+{(TagsEnd)}
+{(TagItemTemplate)}
+<span>[<a href='{[tagitemlink]}' class='itemlink'>{[tagitemtitle]}</a>]</span>
+{(TagItemTemplateEnd)}
+{(TagListTemplate)}
+<small>标签:{[tagcurrent]}</small>
+<div class="taglist">{[taglist]}</div>
+{(TagListTemplateEnd)}
+{(TagListItemTemplate)}
+<div class="postitem">
+    <a href="{[taglistitemlink]}">{[taglistitemtitle]}</a>
+    <small>{[taglistitemdate]}</small>
+</div>
+{(TagListItemTemplateEnd)}

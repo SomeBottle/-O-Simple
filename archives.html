@@ -1,0 +1,15 @@
+{(Archives)}
+<article>
+    <h1 class="title">归档</h1>
+    {[archives]}
+</article>
+{(ArchivesEnd)}
+{(ArchiveTemplate)}
+<h2>{[archiveyear]}</h2>
+<div class="archivelist">{[archiveitems]}</div>
+{(ArchiveTemplateEnd)}
+{(ArchiveItemTemplate)}
+<div class="archiveitem">
+    <span>[{[archiveitemdate]}]<a href="{[archiveitemlink]}" title="{[archiveitemtitle]}">{[archiveitemtitle]}</a></span>
+</div>
+{(ArchiveItemTemplateEnd)}

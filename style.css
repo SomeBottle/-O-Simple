@@ -1,0 +1,183 @@
+body {
+    margin: 0 auto;
+    max-width: 72em;
+    padding: 1em;
+    font-family: Fira Code, Monaco, Consolas, Ubuntu Mono, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, monospace, sans-serif;
+}
+
+.navbar {
+    font-size: 1em;
+    margin-bottom: 1.2em;
+}
+
+.nvitem {
+    margin-right: .5em;
+    word-wrap: break-word;
+}
+
+.nvitem img {
+    height: 1em;
+    vertical-align: middle;
+    margin-right: .5em;
+}
+
+.nvitem:before {
+    content: "[ ";
+}
+
+.nvitem:after {
+    content: " ]";
+}
+
+.nvbtn {
+    display: inline-block;
+    line-height: 1em;
+    text-decoration: none;
+    color: rgb(87, 87, 87);
+    transition: 1s ease;
+}
+
+.current {
+    text-decoration: underline;
+}
+
+.nvbtn:hover {
+    background-color: #d8d8d8;
+}
+
+.postitem,
+.archiveitem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.postitem a,
+.archiveitem a {
+    color: #007bff;
+    font-size: 1.2em;
+    text-decoration: underline;
+    word-wrap: break-word;
+    transition: 0.5s ease;
+}
+
+.postitem a:hover,
+.archiveitem a:hover {
+    color: #00448d;
+}
+
+.postitem small,
+.archiveitem small {
+    font-size: .9em;
+    line-height: 2em;
+}
+
+.pag {
+    display: block;
+}
+
+.pag a {
+    color: rgb(87, 87, 87);
+    font-size: 1.2em;
+    text-decoration: none;
+    text-align: left;
+    transition: 0.5s ease;
+}
+
+.pag a:hover {
+    color: rgb(54, 54, 54);
+    text-decoration: underline;
+}
+
+.posts {
+    margin-bottom: 1.5em;
+}
+
+article .title {
+    font-size: 1.7em;
+    margin: .2em 0;
+}
+
+.articlebody {
+    margin: .5em 0;
+}
+
+.articlebody pre {
+    background-color: #efefef;
+}
+
+.tags {
+    margin: 2em 0;
+    font-size: .5em;
+}
+
+.tags a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.tags a:hover {
+    text-decoration: underline;
+}
+
+.tagshow {
+    margin-top: 1em;
+}
+
+.tagshow .itemlink {
+    color: #007bff;
+}
+
+.tagshow span {
+    margin-right: .5em;
+}
+
+.taglist {
+    margin-top: .8em;
+}
+
+.taglist ul {
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (min-width: 300px) and (max-width: 700px) {
+    .navbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nvitem {
+        flex: 1;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nvitem img {
+        height: 1.5em;
+        margin-right: 0;
+    }
+    .navbar {
+        font-size: 1.5em;
+    }
+    .nvspan {
+        display: none;
+    }
+    .postitem {
+        align-items: center;
+        flex-direction: row;
+    }
+    .postitem a {
+        display: inline-block;
+        width: 70%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .postitem small {
+        flex: 1;
+        text-align: right;
+    }
+}
