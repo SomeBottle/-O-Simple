@@ -1,4 +1,7 @@
 # -O-Simple
+
+![](https://p.pstatp.com/origin/pgc-image/fb60e8efba9e468396851b0b8cabf8cf)  
+
 适用于[-O-](https://github.com/SomeBottle/-O-)的一款极简主题  
 
 ## 部分来自  
