@@ -1,12 +1,19 @@
 {(Post)}
 <article>
-    <h1 class="title">{[posttitle]}</h1>
+    <div class="head">
+        <h1 class="title">{[posttitle]}</h1>
+        <h1 class="btn">[<a href="javascript:void(0);" onclick="togglelazy(this)" id="tgpicbtn">不要加载图片</a>]&nbsp;[<a href="javascript:void(0);" onclick="B.scrollbottom()">跳转到底部</a>]</h1>
+    </div>
     <small>{[postdate]}</small>
     <div class="articlebody markdown-body">{[postcontent]}</div>
     {(:PostEnd)}
-	<div class="tags">
+    <div class="tags">
         <span>标签:</span>{[posttags]}
     </div>
     <div class="comments">{[comments]}</div>
     {(Footer:)}
 </article>
+<script>
+    onlazy = onlazy ? true : onlazy;
+    if (!onlazy) SC("tgpicbtn").innerHTML = "我要加载图片！";
+</script>
