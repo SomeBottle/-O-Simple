@@ -91,6 +91,7 @@ body {
 
 .posts {
     margin-bottom: 1.5em;
+    margin-top: 1em;
 }
 
 article .head {
@@ -197,8 +198,8 @@ article .head a:hover {
         display: flex;
         align-items: center;
         justify-content: space-between;
-		margin-bottom: 0.5em;
-		font-size: 1.5em;
+        margin-bottom: 0.5em;
+        font-size: 1.5em;
     }
     .nvitem {
         flex: 1;
@@ -230,8 +231,9 @@ article .head a:hover {
         text-align: right;
     }
 }
+
 @media screen and (max-width: 300px) {
-	.navbar {
-		margin-bottom: 0.5em;
+    .navbar {
+        margin-bottom: 0.5em;
     }
 }
