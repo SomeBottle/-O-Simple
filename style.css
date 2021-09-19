@@ -7,7 +7,7 @@ body {
 
 .navbar {
     font-size: 1em;
-    margin-bottom: 1.2em;
+    margin-bottom: 0.8em;
 }
 
 .nvitem {
@@ -197,6 +197,8 @@ article .head a:hover {
         display: flex;
         align-items: center;
         justify-content: space-between;
+		margin-bottom: 0.5em;
+		font-size: 1.5em;
     }
     .nvitem {
         flex: 1;
@@ -208,9 +210,6 @@ article .head a:hover {
     .nvitem img {
         height: 1.5em;
         margin-right: 0;
-    }
-    .navbar {
-        font-size: 1.5em;
     }
     .nvspan {
         display: none;
@@ -229,5 +228,10 @@ article .head a:hover {
     .postitem small {
         flex: 1;
         text-align: right;
+    }
+}
+@media screen and (max-width: 300px) {
+	.navbar {
+		margin-bottom: 0.5em;
     }
 }
