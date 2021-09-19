@@ -1,4 +1,4 @@
-{(Post)}
+{(PostTemplate)}
 <article>
     <div class="head">
         <h1 class="title">{[posttitle]}</h1>
@@ -17,3 +17,7 @@
     onlazy = onlazy ? true : onlazy;
     if (!onlazy) SC("tgpicbtn").innerHTML = "我要加载图片！";
 </script>
+{(PostTemplateEnd)}
+{(PostTagsTemplate)}<a href="{[tagurl]}" class="taglink">{[tagname]}</a>{(PostTagsTemplateEnd)}
+{(PostTagsDelimiter)},{(PostTagsDelimiterEnd)}
+{(IfPage)}{(IfPageEnd)}

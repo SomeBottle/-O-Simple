@@ -98,24 +98,32 @@ article .head {
     display: block;
 }
 
-article .head:hover>.btn {
-    margin: 0 0 .2em 0;
-    line-height: initial;
-    opacity: 1;
-}
-
 article .head .title {
     font-size: 1.7em;
     margin: .2em 0;
+    transition: .5s ease;
 }
 
 article .head .btn {
+    position: absolute;
+    top: 1em;
+    z-index: -1;
     font-size: 1.2em;
     margin: 0;
     line-height: 0;
     opacity: 0;
     color: #a7a7a7;
     transition: .5s ease;
+}
+
+article .head:hover>.btn {
+    margin: 0 0 .2em 0;
+    z-index: 1;
+    opacity: 1;
+}
+
+article .head:hover>.title {
+    opacity: 0.1;
 }
 
 article .head a {
