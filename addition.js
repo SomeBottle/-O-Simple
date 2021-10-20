@@ -3,7 +3,7 @@ B.nav({
     activeclass: 'current',
     navclass: 'nvbtn'
 });
-B.navCheck();
+B.navcheck();
 /*The function for toggling the lazyload*/
 var onlazy = true;
 function togglelazy(element) {
