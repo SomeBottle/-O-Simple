@@ -149,6 +149,10 @@ article .header-anchor {
     background-color: #efefef;
 }
 
+.articlebody video {
+    max-width: 100%;
+}
+
 .tags {
     margin: 2em 0;
     font-size: .5em;
