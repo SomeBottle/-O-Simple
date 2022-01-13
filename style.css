@@ -245,3 +245,7 @@ article .header-anchor {
         margin-bottom: 0.5em;
     }
 }
+
+.main-display {
+    opacity: 1!important;
+}
