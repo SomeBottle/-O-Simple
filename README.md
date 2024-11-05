@@ -1,6 +1,8 @@
 # -O-Simple
 
-![](https://ae01.alicdn.com/kf/H114f5fa9c41c4bb89036cdcede5907a9N.jpg)  
+![](./readme_pics/light.png)  
+
+![](./readme_pics/dark.png)
 
 适用于[-O-](https://github.com/SomeBottle/-O-)的一款极简主题  
 
