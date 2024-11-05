@@ -25,3 +25,26 @@ window.addEventListener("scroll", () => {
         SC("backtop").style.opacity = 1;
     }
 }, false);
+
+/*Darkmode Support 20241105*/
+let themeMode = localStorage.getItem("o_simple_darkmode");
+if (themeMode == null) {
+    // 尚未定义，检测浏览器目前的主题
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        themeMode = "dark";
+    } else {
+        themeMode = "light";
+    }
+    localStorage.setItem("o_simple_darkmode", themeMode);
+}
+document.body.setAttribute("data-theme", themeMode);
+
+SC("darkmode-switch").addEventListener("click", () => {
+    if (themeMode == "dark") {
+        themeMode = "light";
+    } else {
+        themeMode = "dark";
+    }
+    localStorage.setItem("o_simple_darkmode", themeMode);
+    document.body.setAttribute("data-theme", themeMode);
+});

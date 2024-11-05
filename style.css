@@ -1,8 +1,58 @@
+/* Darkmode support */
+body[data-theme='light'] {
+    color-scheme: light;
+    --body-background-color: #fff;
+    --navigate-item-font-color: #0d1117;
+    --article-default-font-color: #0d1117;
+    --navigate-a-font-color: rgb(87, 87, 87);
+    --navigate-a-hover-color: #d8d8d8;
+    --post-item-font-color: #0d1117;
+    --post-item-a-color: #007bff;
+    --post-item-a-hover-color: #00448d;
+    --page-next-a-color: rgb(87, 87, 87);
+    --page-next-a-hover-color: rgb(54, 54, 54);
+    --article-head-btn-color: #a7a7a7;
+    --article-head-btn-hover-color: rgb(109, 109, 109);
+    --article-title-anchor-color: #5f5f5f;
+    --article-pre-background-color: #efefef;
+    --article-tags-a-color: #007bff;
+    --article-comments-background-color: #fff;
+    --tag-page-a-color: #007bff;
+    --backtop-btn-color: #292929;
+    --darkmode-btn-color: rgb(80, 80, 80);
+}
+
+body[data-theme='dark'] {
+    color-scheme: dark;
+    --body-background-color: #0d1117;
+    --navigate-item-font-color: #efefef;
+    --navigate-a-font-color: #caebff;
+    --navigate-a-hover-color: #626f77;
+    --article-default-font-color: #d7d7d7;
+    --post-item-font-color: #c0cfe6;
+    --post-item-a-color: #60adff;
+    --post-item-a-hover-color: #0361c7;
+    --page-next-a-color: rgb(204, 204, 204);
+    --page-next-a-hover-color: rgb(163, 163, 163);
+    --article-head-btn-color: #a7a7a7;
+    --article-head-btn-hover-color: rgb(109, 109, 109);
+    --article-title-anchor-color: #efefef;
+    --article-pre-background-color: #414141;
+    --article-tags-a-color: #3295ff;
+    --article-comments-background-color: #ffffffe3;
+    --tag-page-a-color: #3e9bff;
+    --backtop-btn-color: #d1d1d1;
+    --darkmode-btn-color: rgb(224, 224, 224);
+}
+
+
 body {
     margin: 0 auto;
     max-width: 72em;
     padding: 1em;
+    background-color: var(--body-background-color);
     font-family: Fira Code, Monaco, Consolas, Ubuntu Mono, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, monospace, sans-serif;
+    transition: .5s ease;
 }
 
 .navbar {
@@ -13,6 +63,8 @@ body {
 .nvitem {
     margin-right: .5em;
     word-wrap: break-word;
+    color: var(--navigate-item-font-color);
+    transition: 1s ease;
 }
 
 .nvitem img {
@@ -33,8 +85,8 @@ body {
     display: inline-block;
     line-height: 1em;
     text-decoration: none;
-    color: rgb(87, 87, 87);
-    transition: 1s ease;
+    color: var(--navigate-a-font-color);
+    transition: .5s ease;
 }
 
 .current {
@@ -42,7 +94,12 @@ body {
 }
 
 .nvbtn:hover {
-    background-color: #d8d8d8;
+    background-color: var(--navigate-a-hover-color);
+}
+
+article {
+    color: var(--article-default-font-color);
+    transition: .5s ease;
 }
 
 .postitem,
@@ -50,11 +107,13 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
+    color: var(--post-item-font-color);
+    transition: 0.5s ease;
 }
 
 .postitem a,
 .archiveitem a {
-    color: #007bff;
+    color: var(--post-item-a-color);
     font-size: 1.2em;
     text-decoration: underline;
     word-wrap: break-word;
@@ -63,7 +122,7 @@ body {
 
 .postitem a:hover,
 .archiveitem a:hover {
-    color: #00448d;
+    color: var(--post-item-a-hover-color);
 }
 
 .postitem small,
@@ -77,7 +136,7 @@ body {
 }
 
 .pag a {
-    color: rgb(87, 87, 87);
+    color: var(--page-next-a-color);
     font-size: 1.2em;
     text-decoration: none;
     text-align: left;
@@ -85,7 +144,7 @@ body {
 }
 
 .pag a:hover {
-    color: rgb(54, 54, 54);
+    color: var(--page-next-a-hover-color);
     text-decoration: underline;
 }
 
@@ -113,7 +172,7 @@ article .head .btn {
     margin: 0;
     line-height: 0;
     opacity: 0;
-    color: #a7a7a7;
+    color: var(--article-head-btn-color);
     transition: .5s ease;
 }
 
@@ -129,20 +188,25 @@ article .head:hover>.title {
 
 article .head a {
     text-decoration: none;
-    color: #a7a7a7;
+    color: var(--article-head-btn-color);
     transition: .5s ease;
 }
 
 article .head a:hover {
-    color: rgb(109, 109, 109);
+    color: var(--article-head-btn-hover-color);
 }
 
 article .header-anchor {
-    color: #5f5f5f;
+    color: var(--article-title-anchor-color);
 }
 
 article summary {
     margin-bottom: .5em;
+}
+
+article .comments {
+    background-color: var(--article-comments-background-color);
+    border-radius: .3em;
 }
 
 .articlebody {
@@ -150,7 +214,7 @@ article summary {
 }
 
 .articlebody pre {
-    background-color: #efefef;
+    background-color: var(--article-pre-background-color);
 }
 
 .articlebody video {
@@ -163,7 +227,7 @@ article summary {
 }
 
 .tags a {
-    color: #007bff;
+    color: var(--article-tags-a-color);
     text-decoration: none;
 }
 
@@ -176,7 +240,7 @@ article summary {
 }
 
 .tagshow .itemlink {
-    color: #007bff;
+    color: var(--tag-page-a-color);
 }
 
 .tagshow span {
@@ -200,8 +264,87 @@ article summary {
     transition: .5s ease;
 }
 
-.backtop img {
-    width: 2em;
+.backtop .triangle {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-bottom: 1.6em solid var(--backtop-btn-color);
+    background-color: transparent;
+}
+
+/* 深色 / 浅色模式切换按钮 */
+.darkmode-switch {
+    position: relative;
+    display: inline-block;
+    height: .5em;
+    margin-left: .5em;
+    cursor: pointer;
+}
+
+.darkmode-switch .sun,
+.darkmode-switch .moon {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: .7em;
+    height: .7em;
+    border-radius: 50%;
+    background-color: var(--darkmode-btn-color);
+    transition: .5s ease;
+}
+
+.darkmode-switch .sun-ray {
+    height: .5em;
+    transition: .5s ease;
+}
+
+.darkmode-switch .sun-ray .ray:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.darkmode-switch .sun-ray .ray:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+
+.darkmode-switch .sun-ray .ray:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.darkmode-switch:hover .sun-ray {
+    transform: rotate(60deg);
+}
+
+.darkmode-switch .ray {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.3em;
+    height: 2px;
+    background: linear-gradient(to right, var(--darkmode-btn-color) 0%, var(--darkmode-btn-color) 10%, transparent 10%, transparent 85%, var(--darkmode-btn-color) 90%, var(--darkmode-btn-color) 90%);
+}
+
+.darkmode-switch .moon {
+    z-index: 2;
+    opacity: 0;
+}
+
+[data-theme='dark'] .darkmode-switch .moon {
+    background-color: var(--body-background-color);
+    transform: translate(-10%, -80%);
+    opacity: 1;
+}
+
+[data-theme='dark'] .darkmode-switch .sun-ray {
+    opacity: 0;
 }
 
 @media screen and (min-width: 300px) and (max-width: 700px) {
@@ -213,6 +356,7 @@ article summary {
         margin-bottom: 0.5em;
         font-size: 1.5em;
     }
+
     .nvitem {
         flex: 1;
         text-align: center;
@@ -220,17 +364,29 @@ article summary {
         align-items: center;
         justify-content: center;
     }
+
     .nvitem img {
         height: 1.5em;
         margin-right: 0;
     }
+
     .nvspan {
         display: none;
     }
+
+    .darkmode-switch {
+        position: relative;
+        display: inline-block;
+        height: .5em;
+        width: 1.5em;
+        margin-left: 0;
+    }
+
     .postitem {
         align-items: center;
         flex-direction: row;
     }
+
     .postitem a {
         display: inline-block;
         width: 70%;
@@ -238,6 +394,7 @@ article summary {
         text-overflow: ellipsis;
         overflow: hidden;
     }
+
     .postitem small {
         flex: 1;
         text-align: right;
@@ -251,5 +408,18 @@ article summary {
 }
 
 .main-display {
-    opacity: 1!important;
+    opacity: 1 !important;
+}
+
+/* 去除 MathJax 的小白点 */
+.MJX_LiveRegion {
+    background-color: transparent !important;
+}
+
+.MJX_HoverRegion {
+    background-color: transparent !important;
+}
+
+.MJX_ToolTip {
+    background-color: transparent !important;
 }
